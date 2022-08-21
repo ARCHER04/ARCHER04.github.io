@@ -1,7 +1,71 @@
 body{
     font-family: Arial, sans-serif;
 }
+
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #98b7be;
+    z-index: 100;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -3s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes preloader-bounce {
+
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+
+  
+  
+
+
 nav{
+    position: fixed;
     width: 100%;
     height: 60px;
     background: #344051;
@@ -13,6 +77,15 @@ nav{
     font-size: 30px;
     line-height: 60px;
     padding-left: 390px;
+    animation: come 2s;
+}
+@keyframes come{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .menu{
@@ -29,23 +102,57 @@ nav{
     margin-right: 40px;
     text-transform: uppercase;
 }
-
+.menu li a{
+    transition: color,transform 0.2s;
+    display: block;
+    transform: scale(1);
+}
 .menu li a:visited{
     color: white;
 }
-
+.menu li a:before{
+    display: block;
+	position: relative;
+	left: 0; 
+	width: 0;
+	height: 2px; 
+	background-color: #f89006; 
+	content: "";
+	transition: width 0.3s ease-out;
+}
+.menu li a:hover{
+    color:#f89006;
+}
+.menu li a:hover:before{
+	width: 100%;
+    
+}
+.menu li a:active{
+    transform: scale(1.1);
+}
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 
 }
+.title__container input{
+    transition: all 0.5s;
+    transform: scale(1);
+}
+.title__container input:hover{
+    color:white;
+    background: #344051;
+}
+.title__container input:active{
+    transform: scale(1.1);
+}
 .title__container{
+    animation: come 4s;
     float: left;
     margin: 404px 0px 0px 432px;
     color: #2c384a;
     text-align: center;
-  
 }
 
 
@@ -74,7 +181,17 @@ nav{
     cursor: pointer;
     margin: 50px 14px 0px 14px;
 }
-
+.about_me_container input{
+    transition: all 0.5s;
+    transform: scale(1);
+}
+.about_me_container input:hover{
+    color:white;
+    background: #344051;
+}
+.about_me_container input:active{
+    transform: scale(1.1);
+}
 .about_me_container h2{
     text-align: center;
     width: 134px;
@@ -234,6 +351,15 @@ nav{
     font-weight: 550;
     cursor: pointer;
     margin-top: 25px;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+.info_left input:hover{
+    color:white;
+    background: #63b5ae;
+}
+.info_left input:active{
+    transform: scale(1.1);
 }
 .info_right h3{
     color:#384354;
@@ -277,21 +403,26 @@ nav{
 }
 .calculator_footer{
     width: 889px;
+    margin-bottom: 154px;
+
 }
 .calculator_footer p{
     color:#1c2534;
     font-size: 20px;
     font-weight: 550;
 }
-.calculator_footer .number_1{
-    text-align: end;
+.calculator_footer .text_footer{
+    float: left;
 }
-.calculator_footer .number_2{
-    text-align: end;
-    margin-bottom: 152px;
+.calculator_footer .digit{
+   float: right;
 }
+.days, .price{
+    padding-bottom: 32px;
+}
+
 .stat{
-    background: url(../img/bg3.jpg) 90% 100%/auto  no-repeat;
+    background: url(../img/bg3.jpg) center/cover fixed  no-repeat;
     
 }
 .stat_container h2{
@@ -457,23 +588,33 @@ textarea{
     cursor: pointer;
     margin: 0 auto 73px auto;
     display: block;
+    transition: all 0.5s;
+    transform: scale(1);
 }
+
+.submit:hover{
+    color:white;
+    background: #344051;
+}
+.submit:active{
+    transform: scale(1.1);
+}
+   
 .links{
-    padding-bottom: 66px;
+    line-height: 60px;
     width: 430px;
+    height: 100px;
     margin: 0 auto;
     text-align: center;
     
 }
+
 .links img{
     margin-left: 30px;
 }
-.maps {
-    width: 1920px;
-    margin: 0 auto;
-}
 .maps img{
-    max-width: 1900px;
+    display: block;
+    width: 100%; 
 }
 footer{
     width: 100%;

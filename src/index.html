@@ -6,93 +6,143 @@
     <meta name="description" content="Это моя первая страница...">
     <meta name="author" content="Andrey">
     <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Это моя первая страница...">
     <title>Артем Черничкин - Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://allfont.ru/allfont.css?fonts=franklin-gothic-medium" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="preloader">
+    <!--<div class="preloader">
         <div class="preloader__row">
           <div class="preloader__item"></div>
           <div class="preloader__item"></div>
         </div>
-    </div>
+    </div>-->
+
 
     <header>
         <nav>
-            <div class="logo">Артем Черничкин</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Кейсы</a></li>
-                    <li><a href="#">Прайс</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-3 col-lg-3 col-7 ">
+                        <div class="logo">Артем Черничкин</div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-7 col-lg-9 offset-xxl-4 offset-xl-2 px-0 d-none d-lg-block">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">Обо мне</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Кейсы</a></li>
+                                <li><a href="#">Прайс</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center flex-column align-items-end d-lg-none">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Меню
+                            </a>
 
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#">Услуги action</a></li>
+                                <li><a class="dropdown-item" href="#">Кейсы</a></li>
+                                <li><a class="dropdown-item" href="#">Прайс</a></li>
+                                <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-   
-        <section class="main">
-            <div class="title__container">
-                <h1>Привет <br> Я Артем Черничкин</h1>
-                <h4>Фулл стек веб-разработчик</h4>
-                <input type="button" value="Обо мне">
-                <input type="button" value="Мои работы">
-            </div>
-        </section>
 
-        <section class="about_me">
-            <div class="about_me_container">
-                <h2>ОБО МНЕ</h2>
-                <hr>
-                <img src="img/myphoto.png" alt="">
-                <p class="ft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae reprehenderit
-                    blanditiis
-                    culpa sapiente voluptatem dolorem hic nostrum? Ipsam, iste.</p>
-                <p class="st">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae reprehenderit
-                    blanditiis
-                    culpa sapiente voluptatem dolorem hic nostrum? Ipsam, iste.</p>
-                <input type="button" value="Скачать резюме">
+    <section class="main">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6 mt-5 pt-5">
+                    <div class="title__container mt-5">
+                        <h1>Привет <br> Я Артем Черничкин</h1>
+                        <h4>Фулл стек веб-разработчик</h4>
+                        <input type="button" value="Обо мне">
+                        <input type="button" value="Мои работы">
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="skills">
-            <div class="skills_container">
-                <h2>Что я умею</h2>
-                <hr>
-                <div class="skills_item">
+        </div>
+    </section>
+
+    <section class="about_me">
+        <div class="about_me_container container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-3 text-center">
+                    <h2>Обо мне</h2>
+                    <hr>
+                </div>
+            </div>
+            <img class="d-block mx-auto" src="img/myphoto.png" alt="">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start mt-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae
+                        reprehenderit
+                        blanditiis
+                        culpa sapiente voluptatem dolorem hic nostrum? Ipsam, iste.</p>
+                    <p class="st">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae
+                        reprehenderit
+                        blanditiis
+                        culpa sapiente voluptatem dolorem hic nostrum? Ipsam, iste.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-sm-5 col-md-4 col-lg-2 text-center mt-5">
+                    <input type="button" value="Скачать резюме">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills">
+        <div class="skills_container container">
+            <h2>Что я умею</h2>
+            <hr>
+            <div class="row justify-content-center text-center">
+                <div class="skills_item col-12 col-sm-6 col-md-3 mt-5">
                     <img src="img/pc.png" alt="">
                     <h3>Веб-дизайн</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
                 </div>
-                <div class="skills_item">
+                <div class="skills_item col-12 col-sm-6 col-md-3 mt-5">
                     <img src="img/log.png" alt="">
                     <h3>Разработка</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
                 </div>
-                <div class="skills_item">
+                <div class="skills_item col-12 col-sm-6 col-md-3 mt-5">
                     <img src="img/log2.png" alt="">
                     <h3>СЕО-оптимизация</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
                 </div>
-                <div class="skills_item">
+                <div class="skills_item col-12 col-sm-6 col-md-3 mt-5">
                     <img src="img/log3.png" alt="">
                     <h3>Маркетинг</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel.</p>
                 </div>
-                <div class="clear"></div>
             </div>
-        </section>
-        <section class="keys">
-            <div class="keys_container">
-                <h2>КЕЙСЫ</h2>
-                <hr>
-                <p class="text_keys">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, possimus.</p>
-                <img src="img/photo.png" alt="">
+        </div>
+    </section>
+    <section class="keys">
+        <div class="keys_container container">
+            <h2>КЕЙСЫ</h2>
+            <hr>
+            <p class="text_keys">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, possimus.</p>
+            <img src="img/photo.png" alt="">
+            <div class="wrap">
                 <div class="info_left">
                     <h3 class="first_title">CLIENT</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -106,33 +156,40 @@
                             minima
                             dignissimos ratione accusantium aliquam fugit! Dolorum delectus vel at nam, iusto totam
                             magni
-                            cupiditate consequatur praesentium saepe porro architecto officiis cumque ipsum voluptatum
+                            cupiditate consequatur praesentium saepe porro architecto officiis cumque ipsum
+                            voluptatum
                             dolores
-                            mollitia neque quis tempore harum. Magnam autem deleniti eaque, reiciendis aliquid tempore!
+                            mollitia neque quis tempore harum. Magnam autem deleniti eaque, reiciendis aliquid
+                            tempore!
                         </p>
                 </div>
             </div>
-        </section>
-        <div class="clear"></div>
-        <section class="calcul">
-            <div class="calcul_container">
-                <h2>Расчет стоимости</h2>
+        </div>
+    </section>
+    <section class="calcul">
+        <div class="calcul_container container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-md-6 text-center">
+                    <h2>Расчет стоимости</h2>
+                </div>
+            </div>
+            <div class="calcul_inner container">
                 <h3>ТИП САЙТА</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect col-12 col-sm-12 col-md-12 mb-5" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Сайт-визитка</option>
                     <option value="3">Корпоративный сайт</option>
                     <option value="4">Интернет-магазин</option>
                 </select>
                 <h3>Дизайн</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect col-12 col-sm-12 col-md-12 mb-5" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Шаблонный</option>
                     <option value="3">Уникальный</option>
                     <option value="4">WOW-Дизайн</option>
                 </select>
                 <h3>Адаптивность</h3>
-                <select class="mySelect" name="type" id="typeSite">
+                <select class="mySelect col-12 col-sm-12 col-md-12" name="type" id="typeSite">
                     <option value="1" selected disabled>Выберите пункт</option>
                     <option value="2">Только ПК</option>
                     <option value="3">Только мобильный сайт</option>
@@ -141,97 +198,112 @@
                 <hr>
                 <div class="calculator_footer">
                     <div class="days">
-                        <p class="text_footer">Сроки</p>
+                        <p class="text">Сроки</p>
                         <p class="digit">0</p>
                     </div>
                     <div class="price">
-                        <p class="text_footer">Стоимость</p>
+                        <p class="text">Стоимость</p>
                         <p class="digit">0</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <input type="button" value="Оставить заявку">
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="stat">
-            <div class="stat_container">
-                <h2>НЕМНОГО СТАТИСТИКИ</h2>
-                <hr>
-                <div class="stat_item">
+        </div>
+    </section>
+    <section class="stat">
+        <div class="stat_container container">
+            <h2>НЕМНОГО СТАТИСТИКИ</h2>
+            <hr>
+            <div class="row justify-content-center text-center">
+                <div class="stat_item col-12 col-sm-6 col-md-3">
                     <img src="img/logo1.png" alt="">
                     <p class="number">120</p>
                     <p class="text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                 </div>
-                <div class="stat_item">
+                <div class="stat_item col-12 col-sm-6 col-md-3">
                     <img src="img/logo2.png" alt="">
                     <p class="number">4600</p>
                     <p class="text">ЧАСОВ РАБОТЫ</p>
                 </div>
-                <div class="stat_item">
+                <div class="stat_item col-12 col-sm-6 col-md-3">
                     <img src="img/logo3.png" alt="">
                     <p class="number">340</p>
                     <p class="text">ПРОЕКТОВ ЗАВЕРШЕНО</p>
                 </div>
-                <div class="stat_item">
+                <div class="stat_item col-12 col-sm-6 col-md-3">
                     <img src="img/logo4.png" alt="">
                     <p class="number">23</p>
                     <p class="text">НАГРАД ПОЛУЧЕНО</p>
                 </div>
             </div>
-        </section>
-        <section class="comment">
-            <div class="comment_container">
-                <h2>ОТЗЫВЫ</h2>
-                <hr>
-                <img src="img/mihail.png" alt="">
-                <p class="ft">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, in.</p>
-                <p class="st"><span>Lorem</span>, ipsum dolor.</p>
+        </div>
+    </section>
+    <section class="comment">
+        <div class="comment_container container">
+            <h2>ОТЗЫВЫ</h2>
+            <hr>
+            <img class="d-block mx-auto" src="img/mihail.png" alt="">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center">
+                    <p class="ft mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus delectus iure
+                        excepturi recusandae at numquam inventore asperiores ex impedit temporibus?</p>
+                    <p class="st mt-4"> <span>Михаил</span>, Ген. Директор ПАО "Газпром"</p>
+                </div>
             </div>
-        </section>
-        <section class="contact">
-            <div class="contact_container">
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact_container container">
                 <h2>МОИ КОНТАКТЫ</h2>
                 <hr>
-                <p class="ft">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="contacts_data">
-                    <div class="contacts_data_item">
+            <p class="ft">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="contacts_data">
+                <div class="row justify-content-center">
+                    <div class="contacts_data_item col-12 col-sm-6 col-md-3">
                         <img src="img/geo.png" alt="">
                         <p class="text-item">Санкт-Петербург, Невский проспект 11</p>
                     </div>
-                    <div class="contacts_data_item">
+                    <div class="contacts_data_item col-12 col-sm-6 col-md-3">
                         <img src="img/mail.png" alt="">
                         <p class="text-item">info@mycompany.ru</p>
                     </div>
-                    <div class="contacts_data_item">
+                    <div class="contacts_data_item col-12 col-sm-6 col-md-3">
                         <img src="img/tel.png" alt="">
                         <p class="text-item">+7 999-999-99-99</p>
                     </div>
                 </div>
-                <h3>Оставьте мне сообщение</h3>
-                <form action="#">
-                    <div class="contacts_inputs">
-                        <input type="text" placeholder="     Имя">
-                        <input type="text" placeholder="     Email" class="sinput">
-                    </div>
+            </div>
+            <h3>Оставьте мне сообщение</h3>
+            <form action="#">
+                <div class="contacts_inputs">
+                    <input type="text" placeholder="Имя" >
+                    <input type="text" placeholder="Email" class="sinput">
+                </div>
                     <textarea name="message" id="messageText" cols="30" rows="10"
                         placeholder="    Сообщение"></textarea>
-                    <input class="submit" type="button" value="Отправить">
-                </form>
-                <div class="links">
-                    <a href="#"><img src="img/fb.png" alt=""></a>
-                    <a href="#"><img src="img/tvit.png" alt=""></a>
-                    <a href="#"><img src="img/bool.png" alt=""></a>
-                    <a href="#"><img src="img/kat.png" alt=""></a>
-                    <a href="#"><img src="img/inst.png" alt=""></a>
-                    <a href="#"><img src="img/in.png" alt=""></a>
-                </div>
+               
+                <input class="submit" type="button" value="Отправить">
+            </form>
+            <div class="links">
+                <a href="#"><img src="img/fb.png" alt=""></a>
+                <a href="#"><img src="img/tvit.png" alt=""></a>
+                <a href="#"><img src="img/bool.png" alt=""></a>
+                <a href="#"><img src="img/kat.png" alt=""></a>
+                <a href="#"><img src="img/inst.png" alt=""></a>
+                <a href="#"><img src="img/in.png" alt=""></a>
             </div>
-        </section>
-        <section class="maps">
-            <img src="img/map.png" alt="">
-        </section>
-    
+        </div>
+    </section>
+    <section class="maps">
+        <img src="img/map.png" alt="">
+    </section>
+
     <footer>
         <p>Copyright © 2022 Артем Черничкин. Design by Web</p>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

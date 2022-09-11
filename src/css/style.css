@@ -15,7 +15,7 @@ a{
     right: 0;
     bottom: 0;
     background: #98b7be;
-    z-index: 100;
+    z-index: 101;
   }
   
   .preloader__row {
@@ -63,14 +63,32 @@ a{
       transform: scale(1);
     }
   }
-  
 
-  
+  .viz {
+    opacity: 1;
+    transition: 1s;
+  }
+  .clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
 
+#number{
+    opacity: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
 nav{
+    position: fixed;
     width: 100%;
     height: 60px;
     background: #344051;
+    z-index: 100;
 }
 .logo{
     color: #fff;
@@ -122,13 +140,12 @@ nav{
     
 }
 .menu li a:active{
-    transform: scale(1.1);
+    transform: scale(2);
 }
-
-
-
-
-
+.menu li a.active{
+    transform: scale(2);
+    color: #f89006;
+}
 
 .main{
     width: 100%;

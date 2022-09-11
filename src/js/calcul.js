@@ -1,4 +1,4 @@
-let calcul ={
+/*let calcul ={
     price:
     [
         [100,200,300],
@@ -40,4 +40,4 @@ function qunAns(){
     calcul.activeCalcul(sayt, dis, adapt);
 }
 
-qunAns();
+qunAns();*/

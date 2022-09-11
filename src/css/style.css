@@ -76,10 +76,14 @@ a{
   /* 2 */
 }
 
-#number{
+
+.activ-animate{
     opacity: 0;
 }
-
+.activ-animate.activ_show{
+    opacity: 1;
+    transition: opacity 1s;
+}
 .clearfix:after {
   clear: both;
 }
